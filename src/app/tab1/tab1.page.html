@@ -43,11 +43,21 @@
           <img [src]="product?.imgurl || 'assets/imgs/divisions.svg'">
           <ion-card-header>
             <ion-card-subtitle>{{ product?.category }}</ion-card-subtitle>
-            <ion-card-title class="font-size-1">{{ product?.name }}</ion-card-title>
+            <ion-card-title >{{ product?.name }}</ion-card-title>
           </ion-card-header>
           <ion-card-content>
-            <div class="ion-color-dark">{{ product?.price | currency: 'USD' }}</div>
-            <ion-icon name = "heart" aria-setsize="12" color="yellow"></ion-icon>
+            <div class="ion-color-dark" class="'font-size-1">{{ product?.price | currency: 'USD' }}</div>
+            <ion-item no-lines>
+              <ion-col class="ion-padding-horizontal">
+                <ion-badge color="danger" padding="ion-padding-horizontal" > 10% </ion-badge>
+              </ion-col>
+              <ion-col class="ion-padding-horizontal">
+                <div class="ion-color-dark" class="padding-horizontal" >{{ product?.price | currency: 'USD' }}</div>
+              </ion-col>
+              <ion-col class="ion-padding-horizontal">
+                <ion-icon name = "heart" padding="ion-padding-horizontal" > </ion-icon>
+              </ion-col>
+            </ion-item>
             <div><ion-button data-cy="cart-btn" expand="full" color="danger" size="small" (click)="addToCartModal(product)">
               {{ cart.isAddedToCart(product?.id) ? 'Added' : 'Add to cart' }}
             </ion-button></div>

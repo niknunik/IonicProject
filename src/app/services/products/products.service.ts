@@ -35,7 +35,6 @@ export class ProductsService {
       name: 'Convers Classic',
       category: 'Shoes',
       price: 67,
-      icon: 'heart',
       totalStock: 10
     
     }, {
@@ -44,7 +43,6 @@ export class ProductsService {
       name: 'Convers Sunflower',
       category: 'Shoes',
       price: 37,
-      icon: 'heart',
       totalStock: 10
     }, {
       id : 3,
@@ -52,7 +50,6 @@ export class ProductsService {
       name: 'White-Bag',
       category: 'Bag',
       price: 77,
-      icon: 'heart',
       totalStock: 10
      
     }, {
@@ -61,7 +58,6 @@ export class ProductsService {
       name: 'Tee Cutton',
       category: 'T-Shirt',
       price: 65,
-      icon: 'heart',
       totalStock: 10
     }
   ];
